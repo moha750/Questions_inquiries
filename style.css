@@ -1,0 +1,557 @@
+@font-face {
+  font-family: l;
+  src: url(COMM\ -\ Lyon\ Arabic\ Display\ Light.otf);
+}
+
+@font-face {
+  font-family: r;
+  src: url(COMM\ -\ Lyon\ Arabic\ Display\ Regular.otf);
+}
+
+@font-face {
+  font-family: m;
+  src: url(COMM\ -\ Lyon\ Arabic\ Display\ Medium.otf);
+}
+
+@font-face {
+  font-family: b;
+  src: url(COMM\ -\ Lyon\ Arabic\ Display\ Bold.otf);
+}
+
+@font-face {
+  font-family: bb;
+  src: url(COMM\ -\ Lyon\ Arabic\ Display\ Black.otf);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'b', 'r';
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #9868ba;
+}
+
+.one {
+  
+  width: 500px;
+  height: 700px;
+  background-image: url(1.jpg);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.img {
+  width: 80%;
+  margin: 10px auto 0px auto;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+.q {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  width: 80%;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: right;
+  font-size: 15px;
+  border: 2px solid #303030;
+  color: #303030;
+  margin: 0px 0px 15px 0px;
+  box-shadow: rgb(48, 48, 48, 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;  margin-top: 240px;
+}
+
+textarea {
+  width: 80%;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: right;
+  font-size: 15px;
+  border: 2px solid #303030;
+  color: rgb(48, 48, 48);
+  box-shadow: rgb(48, 48, 48 , 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;}
+
+h2 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 22px;
+  color: #fff;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: white;
+  text-decoration: none;
+  
+}
+
+a:hover,
+a:active {
+  border-bottom: 0.1em solid rgba(0, 0, 16, 0.8);
+  color: white;
+  text-decoration: none;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  
+}
+
+.rating {
+  background-color: #ffffff ;
+  padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+  border-radius: 50px;
+  box-shadow: rgb(48, 48, 48 , 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+svg {
+  fill: #303030;
+  height: 40px;
+  width: 40px;
+  margin: 0px 16px;
+  
+}
+
+.rating-form-2 svg {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+#radios label {
+  position: relative;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+input[type="radio"] + svg {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input + svg {
+  cursor: pointer;
+}
+
+input[class="super-happy"]:hover + svg,
+input[class="super-happy"]:checked + svg,
+input[class="super-happy"]:focus + svg {
+  fill: rgb(0, 204, 79);
+}
+
+input[class="happy"]:hover + svg,
+input[class="happy"]:checked + svg,
+input[class="happy"]:focus + svg {
+  fill: rgb(0, 128, 255);
+}
+
+input[class="neutral"]:hover + svg,
+input[class="neutral"]:checked + svg,
+input[class="neutral"]:focus + svg {
+  fill: rgb(232, 214, 0);
+}
+
+input[class="sad"]:hover + svg,
+input[class="sad"]:checked + svg,
+input[class="sad"]:focus + svg {
+  fill: rgb(229, 132, 0);
+}
+
+input[class="super-sad"]:hover + svg,
+input[class="super-sad"]:checked + svg,
+input[class="super-sad"]:focus + svg {
+  fill: rgb(239, 42, 16);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #ffffff;
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: rgb(48, 48, 48 , 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  padding: 5px 0px;
+  border: 0px;
+
+  margin-top: 10px;
+  color: #303030;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+i {
+  color: #303030;
+  font-size: 25px;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 400px) and (max-width:500px ) {
+  .one {
+    width: 400px;
+    height: 550px;
+    background-image: url(2.jpg);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .q {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input {
+    width: 80%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 11px;
+    border: 2px solid #303030;
+    color: #303030;
+    margin: 0px 0px 15px 0px;
+    box-shadow: rgb(48, 48, 48, 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; margin-top: 160px;
+
+  }
+  
+  textarea {
+    width: 80%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 11px;
+    border: 2px solid #303030;
+    color: #303030;
+    box-shadow: rgb(48, 48, 48, 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; 
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:active {
+    border-bottom: 0.1em solid rgba(0, 0, 16, 0.8);
+    color: white;
+    text-decoration: none;
+  }
+  
+  .rating-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .rating {
+    background-color: #ffffff ;
+    padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+    border-radius: 50px;
+    box-shadow: rgb(48, 48, 48 , 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+  
+  svg {
+    fill: #303030;
+    height: 30px;
+    width: 30px;
+    margin: 0px 10px;
+  }
+  
+  .rating-form-2 svg {
+    height: 3rem;
+    width: 3rem;
+    margin: 0.5rem;
+  }
+  
+  #radios label {
+    position: relative;
+  }
+  
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  input[type="radio"] + svg {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  input + svg {
+    cursor: pointer;
+  }
+  
+  input[class="super-happy"]:hover + svg,
+  input[class="super-happy"]:checked + svg,
+  input[class="super-happy"]:focus + svg {
+    fill: rgb(0, 204, 79);
+  }
+  
+  input[class="happy"]:hover + svg,
+  input[class="happy"]:checked + svg,
+  input[class="happy"]:focus + svg {
+    fill: rgb(0, 128, 255);
+  }
+  
+  input[class="neutral"]:hover + svg,
+  input[class="neutral"]:checked + svg,
+  input[class="neutral"]:focus + svg {
+    fill: rgb(232, 214, 0);
+  }
+  
+  input[class="sad"]:hover + svg,
+  input[class="sad"]:checked + svg,
+  input[class="sad"]:focus + svg {
+    fill: rgb(229, 132, 0);
+  }
+  
+  input[class="super-sad"]:hover + svg,
+  input[class="super-sad"]:checked + svg,
+  input[class="super-sad"]:focus + svg {
+    fill: rgb(239, 42, 16);
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    background-color: #ffffff;
+    width: 150px;
+    border-radius: 10px;
+    padding: 5px 0px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 10px;
+    color: #303030;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: rgb(48, 48, 48 , 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+  }
+  
+  footer {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  i {
+    color: #303030;
+    font-size: 20px;
+    margin: 0px 8px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width:400px ) {
+  .one {
+    width: 350px;
+    height: 550px;
+    background-image: url(3.jpg);
+    border-radius: 20px;
+    box-shadow: rgb(48, 48, 48, 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+  
+  .img {
+    width: 80%;
+    margin: 10px auto 0px auto;
+    border-radius: 20px;
+    margin-top: 30px;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .q {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input {
+    width: 75%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 11px;
+    border: 2px solid #303030;
+    margin: 15px 0px 15px 0px;
+    box-shadow: rgb(48, 48, 48, 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; margin-top: 150px;
+  }
+  
+  textarea {
+    margin-bottom: 5px;
+    width: 75%;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 11px;
+    border: 2px solid #303030;
+    box-shadow: rgb(48, 48, 48, 0.3) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+    color: #ffffff;
+  }
+  
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:active {
+    border-bottom: 0.1em solid rgba(0, 0, 16, 0.8);
+    color: white;
+    text-decoration: none;
+  }
+  
+  .rating-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .rating {
+    background-color: #ffffff ;
+    padding: 0.4rem 0.4rem 0.1rem 0.4rem;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  svg {
+    fill: #303030;
+    height: 25px;
+    width: 25px;
+    margin: 0px 7px;
+  }
+  
+  .rating-form-2 svg {
+    height: 3rem;
+    width: 3rem;
+    margin: 0.5rem;
+  }
+  
+  #radios label {
+    position: relative;
+  }
+  
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  input[type="radio"] + svg {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  input + svg {
+    cursor: pointer;
+  }
+  
+  input[class="super-happy"]:hover + svg,
+  input[class="super-happy"]:checked + svg,
+  input[class="super-happy"]:focus + svg {
+    fill: rgb(0, 204, 79);
+  }
+  
+  input[class="happy"]:hover + svg,
+  input[class="happy"]:checked + svg,
+  input[class="happy"]:focus + svg {
+    fill: rgb(0, 128, 255);
+  }
+  
+  input[class="neutral"]:hover + svg,
+  input[class="neutral"]:checked + svg,
+  input[class="neutral"]:focus + svg {
+    fill: rgb(232, 214, 0);
+  }
+  
+  input[class="sad"]:hover + svg,
+  input[class="sad"]:checked + svg,
+  input[class="sad"]:focus + svg {
+    fill: rgb(229, 132, 0);
+  }
+  
+  input[class="super-sad"]:hover + svg,
+  input[class="super-sad"]:checked + svg,
+  input[class="super-sad"]:focus + svg {
+    fill: rgb(239, 42, 16);
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    background-color: #ffffff;
+    width: 150px;
+    border-radius: 10px;
+    padding: 3px 0px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-top: 15px;
+    color: #303030;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  
+  footer {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  i {
+    color: #303030;
+    font-size: 20px;
+    margin: 0px 8px;
+    cursor: pointer;
+  }
+}

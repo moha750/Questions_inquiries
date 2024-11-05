@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>مجلس أدِيب</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="one">
+		<div class="img">
+			<img src="q.png" alt="">
+		</div>
+
+		<form name="send" id="send" method="post" action="https://script.google.com/macros/s/AKfycbzn2zLSaSG3UPSKxLK2SemqVbiaxJ3cpt_5WW49jwUH8u7TkHGFpeqXLUzCEgePdqR0LQ/exec">
+			<div class="q">
+			<input class="input" type="text" placeholder="الأسم (إختياري)" name="الأسم">
+		</div>
+		<div class="q">
+			<textarea id="name" name="السؤال أو الاستفسار" id="" cols="0" rows="4" placeholder="..عندك اقتراح؟ او فكرة؟ أو حتى حاب تنتقد! هذه المساحه لك" required></textarea>
+		</div>
+			<div class="button">
+				<button onclick="sweetalertclick()">ارســـال</button>
+			  </div>
+		</form>
+
+
+	</div>
+
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbzn2zLSaSG3UPSKxLK2SemqVbiaxJ3cpt_5WW49jwUH8u7TkHGFpeqXLUzCEgePdqR0LQ/exec'
+		const form = document.forms['send']
+		
+		form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          Swal.fire({
+  title: '<strong>!أدِيب يهتم ب ملاحظاتك</strong>',
+  icon: 'success',
+  html:
+    'بإذن الله يتم الجواب على سؤالك أو استفسارك',
+  showCloseButton: true,
+  focusConfirm: false,
+  confirmButtonText:
+  '<a href="index.html">كتابة سؤال جديد</a>',
+  confirmButtonColor: '#9868ba',
+
+})
+        })
+		  </script>
+
+<script>
+	function sweetalertclick(){
+	Swal.fire({
+icon: 'error',
+title: '!يرجى ملئ الحقول المطلوبة',
+confirmButtonText: 'تم',
+confirmButtonColor: '#bd2429',
+
+})}
+  </script>
+
+  <script>
+	  document.addEventListener('invalid', (function () {
+  return function (e) {
+    e.preventDefault();
+    document.getElementById("name").focus();
+  };
+})(), true);
+  </script>
+
+</body>
+</html>
